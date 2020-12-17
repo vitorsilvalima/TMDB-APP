@@ -1,4 +1,5 @@
-export { default } from "./src";
+export { default } from "./storybook";
+// export { default } from "./src";
 
 // import { StatusBar } from 'expo-status-bar';
 // import React from 'react';

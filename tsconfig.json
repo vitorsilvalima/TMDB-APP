@@ -12,7 +12,8 @@
     "paths": {
       "@shared/*": ["src/shared/*"],
       "@features/*": ["src/features/*"],
-      "@navigation/*": ["src/navigation/*"]
+      "@navigation/*": ["src/navigation/*"],
+      "@storybook-decorators/*": ["storybook/decorators/*"]
     }
   }
 }

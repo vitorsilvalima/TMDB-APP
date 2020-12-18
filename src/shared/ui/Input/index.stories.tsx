@@ -10,8 +10,9 @@ storiesOf("Input", module)
   .add("default", () => (
     <Input
       IconLeft={Ionicons as any}
-      iconName="mail-outline"
+      iconLeftName="mail-outline"
       onChange={action("clicked-text")}
       value="test"
+      placeholder="placeholder"
     />
   ));

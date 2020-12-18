@@ -7,7 +7,7 @@ const SafeArea = styled.SafeAreaView`
 `;
 
 const Content = styled.View`
-  padding: 16px;
+  padding: 20px;
   flex: 1;
 `;
 

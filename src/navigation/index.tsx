@@ -1,3 +1,4 @@
+import { AuthStack } from "@features/auth/navigation";
 import { OnboardingStack } from "@features/onboarding/navigation";
 import {
   NavigationContainer,
@@ -11,6 +12,7 @@ import routes from "./routes";
 
 type RootStackParamList = {
   [routes.onBoarding.itself]: undefined;
+  [routes.auth.itself]: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -19,12 +21,13 @@ function RootNavigator() {
   return (
     <Stack.Navigator
       screenOptions={{ headerShown: false }}
-      initialRouteName={routes.onBoarding.itself}
+      initialRouteName={routes.auth.itself}
     >
       <Stack.Screen
         name={routes.onBoarding.itself}
         component={OnboardingStack}
       />
+      <Stack.Screen name={routes.auth.itself} component={AuthStack} />
     </Stack.Navigator>
   );
 }

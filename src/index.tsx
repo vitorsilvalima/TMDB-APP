@@ -1,13 +1,10 @@
-import StorybookApp from "./storybook";
-import AppEntry from "./src";
-// export { default } from "./src";
-
 import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import useCachedResources from "@shared/hooks/useCachedResources";
 import useColorScheme from "@shared/hooks/useColorScheme";
+import Navigation from "@navigation/index";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -18,9 +15,8 @@ export default function App() {
   } else {
     return (
       <SafeAreaProvider>
-        {/* <Navigation colorScheme={colorScheme} /> */}
-        {/* <StorybookApp /> */}
-        <AppEntry />
+        <Navigation colorScheme={colorScheme} />
+        <StatusBar />
       </SafeAreaProvider>
     );
   }

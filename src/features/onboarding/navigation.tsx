@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import MainScrenn from "@features/onboarding/screens";
 
 export const onboardingRoutes = {
-  itself: "app.onboarding",
+  itself: "onboarding",
 } as const;
 
 export type OnBoardingStackParamList = {

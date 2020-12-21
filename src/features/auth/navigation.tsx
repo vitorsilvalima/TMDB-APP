@@ -4,9 +4,9 @@ import HomeScreen from "./screens/home";
 import LoginScreen from "./screens/login";
 
 export const AUTH_ROUTES = {
-  itself: "app.auth",
-  home: "app.auth.home",
-  login: "app.auth.login",
+  itself: "auth",
+  home: "auth.home",
+  login: "auth.login",
 } as const;
 
 export type AuthParamList = {

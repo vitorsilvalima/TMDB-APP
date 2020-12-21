@@ -1,10 +1,15 @@
 import LoginContainer from "@features/auth/containers/login";
+import { CompositeNavigationProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import React from "react";
-import { AuthParamList, AUTH_ROUTES } from "../../navigation";
+import { RootStackParamList } from "../../../../navigation";
+import { AuthParamList } from "../../navigation";
 
 type LoginScreenProps = {
-  navigation: StackNavigationProp<AuthParamList, "app.auth.login">;
+  navigation: CompositeNavigationProp<
+    StackNavigationProp<AuthParamList, "auth.login">,
+    StackNavigationProp<RootStackParamList>
+  >;
 };
 
 const LoginScreen = ({ navigation }: LoginScreenProps) => (
@@ -13,6 +18,7 @@ const LoginScreen = ({ navigation }: LoginScreenProps) => (
       email: "",
       password: "",
     }}
+    onLogin={() => navigation.navigate("app")}
     onBack={navigation.goBack}
   />
 );

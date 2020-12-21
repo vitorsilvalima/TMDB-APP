@@ -11,6 +11,7 @@ storiesOf("features/auth/containers/login", module)
         password: "",
       }}
       onBack={action("onBack")}
+      onLogin={action("onLogin")}
     />
   ))
   .add("filled", () => (
@@ -20,5 +21,6 @@ storiesOf("features/auth/containers/login", module)
         password: "password",
       }}
       onBack={action("onBack")}
+      onLogin={action("onLogin")}
     />
   ));

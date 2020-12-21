@@ -4,14 +4,14 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { AuthParamList } from "@features/auth/navigation";
 
 interface HomeScreen {
-  navigation: StackNavigationProp<AuthParamList, "app.auth.home">;
+  navigation: StackNavigationProp<AuthParamList, "auth.home">;
 }
 
 const HomeScreen = ({ navigation }: HomeScreen) => {
   return (
     <HomeContainer
       onCreatedAccount={() => null}
-      onLogin={() => navigation.navigate("app.auth.login")}
+      onLogin={() => navigation.navigate("auth.login")}
     />
   );
 };

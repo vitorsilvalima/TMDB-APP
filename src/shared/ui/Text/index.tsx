@@ -34,8 +34,19 @@ interface Typography {
 }
 
 export const Typography = styled.Text<Typography>`
-  font-family: ${Fonts.montSerratBold};
   font-size: ${(p) => fontSizeMap[p.variant]}px;
   font-family: ${(p) => fontNameMap[p.variant]};
   color: #fff;
+`;
+
+interface TextProps {
+  fontFamily: Fonts;
+  fontSize: number;
+  color: string;
+}
+
+export const Text = styled.Text<TextProps>`
+  font-size: ${(p) => p.fontSize}px;
+  font-family: ${(p) => p.fontFamily};
+  color: ${(p) => p.color};
 `;

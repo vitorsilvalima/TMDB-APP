@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import LoginScreen from "@features/auth/screens/login";
 import { TabBar } from "./components/TabBar";
+import MovieHome from "@features/movie/screens/MovieHome";
 
 export const APP_ROUTES = {
   itself: "app",
@@ -10,15 +10,14 @@ export const APP_ROUTES = {
   profile: "app.profile",
 } as const;
 
-const AppTabNavigator = createBottomTabNavigator();
+export type AppParamList = {
+  [APP_ROUTES.movieList]: undefined;
+};
+
+const AppTabNavigator = createBottomTabNavigator<AppParamList>();
 
 export const AppStack = () => (
   <AppTabNavigator.Navigator tabBar={TabBar}>
-    <AppTabNavigator.Screen
-      name={APP_ROUTES.movieList}
-      component={LoginScreen}
-    />
-
-    <AppTabNavigator.Screen name={APP_ROUTES.profile} component={LoginScreen} />
+    <AppTabNavigator.Screen name={APP_ROUTES.movieList} component={MovieHome} />
   </AppTabNavigator.Navigator>
 );

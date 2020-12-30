@@ -74,14 +74,22 @@ export const TabBar = ({
             onLongPress={onLongPress}
             style={{ padding: 10 }}
           >
-            <Ionicons
-              name="ios-home-sharp"
-              color={isFocused ? Colors.dark.primaryColor : "#686868"}
-              size={24}
-            />
+            {options.tabBarIcon?.({
+              focused: isFocused,
+              color: "test",
+              size: 30,
+            })}
           </TouchableOpacity>
         );
       })}
     </SafeAreaView>
   );
 };
+
+{
+  /* <Ionicons
+              name="videocam"
+              color={isFocused ? Colors.dark.primaryColor : "#686868"}
+              size={24}
+            /> */
+}
